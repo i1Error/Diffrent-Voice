@@ -6,17 +6,13 @@ import speech_recognition as sr
 import queue
 import tempfile
 import whisper
-import os
 import threading
 import click
-import torch
 import numpy as np
-import openai
 import json
 
 EL_key = "EL_key"
 EL_voice = "EL_voice"
-OAI_key = "OAI_key"
 
 @click.command()
 @click.option("--model", default="base", help="Model to use", type=click.Choice(["tiny","base", "small","medium","large"]))
